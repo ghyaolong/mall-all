@@ -11,3 +11,7 @@ eureka:
 spring:
   application:
     name: eurka-server
+  security:   ## 开启验证，访问注册中心需要用户名和密码
+    user:
+      name: admin
+      password: 123456
