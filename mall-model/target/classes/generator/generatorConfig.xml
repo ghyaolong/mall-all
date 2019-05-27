@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="generator/application.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="autoDelimitKeywords" value="true"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.buildinglife.mall.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="${druid.driver-class-name}" connectionURL="${druid.url}" userId="${druid.username}" password="${druid.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.buildinglife.mall.po" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="../mall-dao/src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.buildinglife.mall.dao" targetProject="../mall-dao/src/main/java" type="XMLMAPPER"/>
+
+        <table schema="tb" tableName="tb_address">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+        <table schema="tb" tableName="tb_base">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_dict">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_express">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_item">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_item_cat">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_item_desc">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_log">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_member">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_order">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_order_item">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_order_shipping">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_panel">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_panel_content">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_permission">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_role">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_role_perm">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_shiro_filter">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_thanks">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table schema="tb" tableName="tb_user">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>

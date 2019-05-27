@@ -14,7 +14,7 @@
         <groupId>com.buildinglife.mall</groupId>
         <artifactId>mall-all</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>com.buildinglife.mall.server.center</groupId>
@@ -24,10 +24,10 @@
     <description>Demo project for Spring Boot</description>
     <packaging>jar</packaging>
 
-    <properties>
+    <!--<properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
-    </properties>
+    </properties>-->
 
     <dependencies>
         <dependency>
@@ -41,6 +41,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!--<repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>http://mvnrepository.com/</url>
+        </repository>
+    </repositories>-->
+
+
 
 
 </project>
