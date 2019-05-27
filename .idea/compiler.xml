@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="user-service" />
         <module name="mall-model" />
         <module name="eureka-server" />
         <module name="mall-dao" />
@@ -20,6 +21,7 @@
       <module name="mall-common" options="-parameters" />
       <module name="mall-dao" options="-parameters" />
       <module name="mall-model" options="-parameters" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>

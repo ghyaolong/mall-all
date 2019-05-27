@@ -31,11 +31,11 @@
     </properties>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>-->
+        </dependency>
 
         <!-- lombok -->
         <dependency>
@@ -43,48 +43,37 @@
             <artifactId>lombok</artifactId>
             <version>1.18.2</version>
         </dependency>
-        <!--tk-mybatis-->
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>2.0.4</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>persistence-api</artifactId>
-                    <groupId>javax.persistence</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
         <!--spring boot 整合pagehelper分页插件-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.1.0</version>
-        </dependency>
+        </dependency>-->
 
         <!-- alibaba fastjson-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.49</version>
         </dependency>
-        <!--********* GSON *************-->
+        &lt;!&ndash;********* GSON *************&ndash;&gt;
 
-        <!-- JWT -->
+        &lt;!&ndash; JWT &ndash;&gt;
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency>
 
-        <!-- Hutool工具包 -->
+        &lt;!&ndash; Hutool工具包 &ndash;&gt;
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>4.0.5</version>
         </dependency>
 
-        <!--easyPoi start-->
+        &lt;!&ndash;easyPoi start&ndash;&gt;
         <dependency>
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-base</artifactId>
@@ -99,7 +88,7 @@
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-annotation</artifactId>
             <version>3.0.3</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <dependencyManagement>
