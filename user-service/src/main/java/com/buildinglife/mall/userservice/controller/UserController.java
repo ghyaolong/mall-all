@@ -4,13 +4,14 @@ import com.buildinglife.mall.dao.TbUserMapper;
 import com.buildinglife.mall.po.TbUser;
 import com.buildinglife.mall.qo.UserQO;
 import com.buildinglife.mall.vo.UserVO;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
 import utils.MyBeanUtils;
 
