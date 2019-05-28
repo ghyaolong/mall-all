@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.buildinglife.mall</groupId>
-    <artifactId>user-service</artifactId>
+
+    <groupId>com.buildinglifet.mall</groupId>
+    <artifactId>member-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>user-service</name>
-    <description>用户相关服务提供方</description>
+    <name>member-service</name>
+    <description>会员管理</description>
 
     <parent>
         <groupId>com.buildinglife.mall</groupId>
@@ -25,23 +25,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.buildinglife.mall</groupId>
-            <artifactId>mall-model</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.buildinglife.mall</groupId>
-            <artifactId>mall-dao</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.buildinglife.mall</groupId>
-            <artifactId>mall-common</artifactId>
         </dependency>
     </dependencies>
     <build>

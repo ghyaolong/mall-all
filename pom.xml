@@ -22,6 +22,8 @@
         <module>mall-common</module>
         <module>eureka-server</module>
         <module>user-service</module>
+        <module>order-service</module>
+        <module>member-service</module>
     </modules>
 
     <properties>
