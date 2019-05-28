@@ -21,6 +21,7 @@
         <module>mall-dao</module>
         <module>mall-common</module>
         <module>eureka-server</module>
+        <module>user-service</module>
     </modules>
 
     <properties>
@@ -36,6 +37,31 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <!--tk-mybatis-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>2.0.4</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>persistence-api</artifactId>
+                    <groupId>javax.persistence</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Mysql Connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.15</version>
+        </dependency>
+
 
         <!-- lombok -->
         <dependency>
@@ -45,35 +71,35 @@
         </dependency>
 
         <!--spring boot 整合pagehelper分页插件-->
-        <!--<dependency>
+        <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.1.0</version>
-        </dependency>-->
+            <version>1.2.10</version>
+        </dependency>
 
         <!-- alibaba fastjson-->
-        <!--<dependency>
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.49</version>
         </dependency>
-        &lt;!&ndash;********* GSON *************&ndash;&gt;
+        <!--********* GSON *************-->
 
-        &lt;!&ndash; JWT &ndash;&gt;
+        <!-- JWT -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency>
 
-        &lt;!&ndash; Hutool工具包 &ndash;&gt;
+        <!-- Hutool工具包 -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>4.0.5</version>
         </dependency>
 
-        &lt;!&ndash;easyPoi start&ndash;&gt;
+        <!--easyPoi start-->
         <dependency>
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-base</artifactId>
@@ -88,7 +114,7 @@
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-annotation</artifactId>
             <version>3.0.3</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -101,11 +127,21 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--<dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-                <version>2.1.1.RELEASE</version>
-            </dependency>-->
+            <dependency>
+                <groupId>com.buildinglife.mall</groupId>
+                <artifactId>mall-model</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.buildinglife.mall</groupId>
+                <artifactId>mall-dao</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.buildinglife.mall</groupId>
+                <artifactId>mall-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

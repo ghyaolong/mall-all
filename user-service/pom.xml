@@ -30,6 +30,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.buildinglife.mall</groupId>
+            <artifactId>mall-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buildinglife.mall</groupId>
+            <artifactId>mall-dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buildinglife.mall</groupId>
+            <artifactId>mall-common</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
