@@ -1,8 +1,10 @@
 package com.buildinglife.mall.userservice.controller;
 
 import com.buildinglife.mall.dao.TbUserMapper;
+import com.buildinglife.mall.enums.ExceptionCode;
 import com.buildinglife.mall.po.TbUser;
 import com.buildinglife.mall.qo.UserQO;
+import com.buildinglife.mall.vo.BizException;
 import com.buildinglife.mall.vo.UserVO;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -58,6 +60,21 @@ public class UserController {
             return new PageInfo<UserVO>(userVOS);
         }
         return null;
+    }
+
+    @PostMapping("/login")
+    public void login(String username,String password){
+         if(StringUtils.isEmpty(username)||StringUtils.isEmpty(password)){
+             throw new BizException(ExceptionCode.REQUEST_PARAM_ERROR);
+         }
+         Example example = new Example(TbUser.class);
+         example.createCriteria().andEqualTo("username",username).andEqualTo("password",password);
+        TbUser tbUser = tbUserMapper.selectOneByExample(example);
+        if(tbUser!=null){
+            //todo 登录成功
+        }else{
+            //todo 用户名或密码不正确
+        }
     }
 
 }
